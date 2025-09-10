@@ -1,0 +1,33 @@
+# --- Binaries & build artifacts ---
+bin/
+!bin/data/       # garde bin/data (tes assets)
+obj/
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.lib
+*.exp
+
+# --- Visual Studio generated files ---
+*.sdf
+*.suo
+*.user
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.ipch
+
+# Build directories
+[Bb]uild/
+Debug*/
+Release*/
+x64/
+
+# --- OS-specific ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editors ---
+.vscode/
