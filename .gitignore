@@ -1,6 +1,6 @@
 # --- Binaries & build artifacts ---
 bin/
-!bin/data/       # garde bin/data (tes assets)
+!bin/data/       # conserve bin/data (assets : images, sons, shaders, etc.)
 obj/
 *.exe
 *.dll
@@ -10,6 +10,7 @@ obj/
 *.exp
 
 # --- Visual Studio generated files ---
+.vs/             # dossier caché de VS
 *.sdf
 *.suo
 *.user
@@ -31,3 +32,4 @@ desktop.ini
 
 # --- Editors ---
 .vscode/
+
