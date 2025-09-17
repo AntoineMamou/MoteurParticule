@@ -16,4 +16,8 @@ public:
 	vect ProduitVectoriel(vect & others);
 
 	float getNorm();
+	float getNormSquared();
+
+	vect normalize();
+	vect composantProduct(vect & other);
 };
