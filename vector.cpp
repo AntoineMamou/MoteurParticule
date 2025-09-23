@@ -1,5 +1,5 @@
 #include "vector.h"
-// Hello
+
 vect::vect() {
 	// Default constructor: initializes an vector to (0,0,0)
 	this->x = 0;

@@ -9,6 +9,8 @@ float gravity = -9.81;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+
+	//run the tests for the Vector class
 	TestVector::runTests();
 
 	// window setup
