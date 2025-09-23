@@ -14,7 +14,6 @@ vect::vect(float x, float y, float z) {
 }
 
 
-
 vect vect::operator*(float constante) {
 	// Scalar multiplication: scales all vector components by the constant
 	return vect(x * constante, y * constante, z * constante);
@@ -36,7 +35,6 @@ vect vect::operator-(vect & others) {
 	// Vector subtraction: subtracts corresponding components
 	return vect(x - others.x, y - others.y, z - others.z);
 }
-
 
 
 float vect::getNorm() {

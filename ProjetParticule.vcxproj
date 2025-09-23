@@ -236,6 +236,7 @@
     <ClInclude Include="baseObject.h" />
     <ClInclude Include="particule.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="testVector.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>

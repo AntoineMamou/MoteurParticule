@@ -13,7 +13,9 @@
     <ClCompile Include="particule.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="baseObject.cpp" />
+    <ClCompile Include="baseObject.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -30,7 +32,10 @@
     <ClInclude Include="particule.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="baseObject.h" />
+    <ClInclude Include="baseObject.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="testVector.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

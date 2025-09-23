@@ -1,5 +1,6 @@
 #include "ofApp.h"
 #include <numbers>
+#include "../testVector.h"
 
 std::vector<particule> particuleArray;
 float angle = 45;
@@ -7,6 +8,9 @@ float duration = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+
+	TestVector::runTests();
+
 	ofSetVerticalSync(true);
 	ofBackground(0, 0, 0, 0);
 
