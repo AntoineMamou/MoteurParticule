@@ -16,6 +16,9 @@
     <ClCompile Include="baseObject.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="testVector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -35,7 +38,9 @@
     <ClInclude Include="baseObject.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="testVector.h" />
+    <ClInclude Include="testVector.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
