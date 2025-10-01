@@ -16,10 +16,14 @@ public:
 	vect getPosition();
 	vect getVitesse();
 	vect getAccel();
+	
 
 	void setMasse(float m);
 	void setGravity(float g);
 	void setDamping(float f);
+
+
+	void applySpeed(vect v);
 
 	float getMasse();
 	float getGravity();

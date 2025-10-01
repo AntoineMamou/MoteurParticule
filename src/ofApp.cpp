@@ -3,8 +3,10 @@
 #include "..//testVector.h";
 
 std::vector<particule> particuleArray;
+std::vector<particule> blobArray;
 float angle = 30;
 float duration = 0;
+float speedBlob = 1000;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
@@ -24,6 +26,13 @@ void ofApp::update() {
 			part.addTracePosition(part.getPosition());
 		}
 	}
+
+	for (auto & part : blobArray){
+		float time = 1 / ofGetFrameRate();
+		part.computeForce();
+		part.EulerIntegration(time);
+
+	}
 }
 
 //--------------------------------------------------------------
@@ -32,6 +41,11 @@ void ofApp::draw() {
 		part.drawTrace(ofColor(127, 0, 0));
 		part.draw();
 	}
+
+	for (auto & part : blobArray) {
+		part.draw();
+	}
+
 
 	ofDrawBitmapStringHighlight("800 metres", 930, 600);
 	ofDrawArrow(glm::vec3(100, 600, 0), glm::vec3(900, 600, 0), 2);
@@ -96,6 +110,36 @@ void ofApp::keyPressed(int key) {
 		particuleArray.push_back(bullet);
 	}
 
+	// Spawn Blob
+	if (key == 'x') {
+		particule blob({ 500, 500, 0 }, { 0, 0, 0 });
+		blob.setDamping(0.0001f);
+		blob.setMasse(0.01f);
+		blob.setGravity(0);
+		blobArray.push_back(blob);
+	}
+
+	if (key == 'w') {
+		for (particule c : blobArray) {
+			c.applySpeed({0, -speedBlob, 0});
+		}
+	}
+	if (key == 's') {
+		for (particule c : blobArray) {
+			c.applySpeed({ 0, speedBlob, 0 });
+		}
+	}
+	if (key == 'a') {
+		for (particule c : blobArray) {
+			c.applySpeed({ -speedBlob, 0, 0 });
+		}
+	}
+	if (key == 'd') {
+		for (particule c : blobArray) {
+			c.applySpeed({ speedBlob, 0, 0 });
+		}
+	}
+
 	if (key == 8) {
 		particuleArray.clear();
 	}
@@ -112,6 +156,26 @@ void ofApp::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key) {
+	if (key == 's') {
+		for (particule c : blobArray) {
+			c.applySpeed({ 0, -speedBlob, 0 });
+		}
+	}
+	if (key == 'w') {
+		for (particule c : blobArray) {
+			c.applySpeed({ 0, speedBlob, 0 });
+		}
+	}
+	if (key == 'd') {
+		for (particule c : blobArray) {
+			c.applySpeed({ -speedBlob, 0, 0 });
+		}
+	}
+	if (key == 'a') {
+		for (particule c : blobArray) {
+			c.applySpeed({ speedBlob, 0, 0 });
+		}
+	}
 }
 
 //--------------------------------------------------------------

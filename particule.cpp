@@ -62,8 +62,8 @@ void particule::EulerIntegration(float time) {
 	vitesse = vitesse + deltaVitesse;
 	vect deplacement = vitesse * time;
 
-	/* ######## FOR DEBUG ########
-	* 
+	 //####### FOR DEBUG ########
+	
 	printf("acc (y) = %f\n", acceleration.y);
 	printf("vit (y) = %f\n\n", vitesse.y);
 	printf("deplacement (y) = %f\n\n", deplacement.y);
@@ -75,7 +75,7 @@ void particule::EulerIntegration(float time) {
 	printf("angle : %f\n", std::atanf(vitesse.y / vitesse.x) * 180 / std::numbers::pi);
 
 	printf("------------------------\n");
-	*/
+	
 
 	// Invert the vertical velocity component, since the rendering coordinate system is inverted
 	// 0 --> top of the screen
@@ -162,4 +162,10 @@ void particule::drawTrace(ofColor color) {
 	ofSetColor(color);
 	drawTrace();
 	ofSetColor(ofColor(255, 255, 255));
+}
+
+
+
+void particule::applySpeed(vect v) {
+	this->vitesse += v;
 }
